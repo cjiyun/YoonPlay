@@ -1,0 +1,5 @@
+.movie:hover {
+  /* background-color: black;
+  opacity: 0.5; */
+  filter: brightness(50%);
+}
