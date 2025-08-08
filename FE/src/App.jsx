@@ -17,6 +17,7 @@ function App() {
           position="top-center"
           autoClose={3000}
           pauseOnHover
+          closeOnClick
           hideProgressBar
           theme="dark"
         />
