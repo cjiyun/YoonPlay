@@ -16,6 +16,7 @@ import { AppController } from '@src/app.controller';
 import { AppService } from '@src/app.service';
 import { JwtService } from '@nestjs/jwt';
 import { BearerTokenMiddleware } from '@src/auth/middleware/bearer-token.middleware';
+import { TmdbModule } from '@src/tmdb/tmdb.module';
 
 @Module({
   imports: [
@@ -32,6 +33,7 @@ import { BearerTokenMiddleware } from '@src/auth/middleware/bearer-token.middlew
     UserModule,
     AuthModule,
     TodoModule,
+    TmdbModule,
   ],
   controllers: [AppController],
   providers: [AppService, JwtService],
@@ -50,6 +52,6 @@ export class AppModule implements NestModule {
           method: RequestMethod.POST,
         },
       )
-      .forRoutes('*');
+      .forRoutes('user', 'todo');
   }
 }

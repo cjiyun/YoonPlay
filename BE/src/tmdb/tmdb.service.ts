@@ -10,8 +10,10 @@ export class TmdbService {
     },
   });
 
-  async getPopular() {
-    const { data } = await this.client.get('/movie/popular');
+  async getPopular(language = 'ko-KR', page = 1) {
+    const { data } = await this.client.get('/movie/popular', {
+      params: { language, page },
+    });
     return data;
   }
 }
