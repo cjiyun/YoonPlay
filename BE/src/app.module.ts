@@ -4,9 +4,6 @@ import {
   NestModule,
   RequestMethod,
 } from '@nestjs/common';
-
-import { User } from '@src/user/entity/user.entity';
-import { Todo } from '@src/todo/entity/todo.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { UserModule } from '@src/user/user.module';
@@ -20,12 +17,15 @@ import { TmdbModule } from '@src/tmdb/tmdb.module';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'sqlite',
-      database: 'yongcha-auth.sqlite',
-      entities: [User, Todo],
-      synchronize: true,
-      logging: true,
+    TypeOrmModule.forRootAsync({
+      useFactory: () => ({
+        type: 'postgres',
+        url: process.env.DATABASE_URL,
+        autoLoadEntities: true,
+        synchronize: true,
+        ssl:
+          process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false,
+      }),
     }),
     ConfigModule.forRoot({
       isGlobal: true,
