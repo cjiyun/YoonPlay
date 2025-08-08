@@ -1,0 +1,5 @@
+[phases.build]
+command = "cd BE && npm ci || (cd BE && npm install) && npm run build"
+
+[start]
+command = "cd BE && npm run start:prod"

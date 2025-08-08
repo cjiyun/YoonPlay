@@ -1,0 +1,7 @@
+[build]
+  base    = "FE"
+  publish = "FE/dist"
+  command = "yarn --cwd FE build"
+
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "VITE_IMAGE_URL,VITE_REQUEST_API_URL"
