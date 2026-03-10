@@ -48,6 +48,27 @@ React 기반으로 제작되었으며, 무한 스크롤, 페이지네이션, 스
 - Render / Netlify 기반 서비스 배포 환경 구축
 - 제공된 NestJS 백엔드 코드 일부 수정 및 운영 환경 구성
 
+## 📷 Screenshots
+### Home
+<img width="380" height="200" alt="image" src="https://github.com/user-attachments/assets/afa67e4f-2e64-45cb-a04d-4a61b301b11a" />
+
+### Category
+<img width="380" height="200" alt="image" src="https://github.com/user-attachments/assets/f8418d72-efdc-4acc-88cf-113cb44bedd4" />
+
+### Search
+<img width="380" height="200" alt="image" src="https://github.com/user-attachments/assets/85f9a89d-0ebd-4835-81e1-c7ec041242bf" />
+
+### Movie Detail
+<img width="380" height="200" alt="image" src="https://github.com/user-attachments/assets/5e2903ec-c529-413b-a8e6-71468665df26" />
+
+### Login
+<img width="380" height="200" alt="image" src="https://github.com/user-attachments/assets/78a79746-59ff-458c-8612-06074d630beb" />
+
+### Sign up
+<img width="380" height="200" alt="image" src="https://github.com/user-attachments/assets/c175d9c6-808e-48f1-9aeb-9e81013b8da2" />
+
+
+
 ## 📂 Project Structure
 ```
 src
